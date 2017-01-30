@@ -30,6 +30,7 @@
 
 
 #include <sstream>
+#include <algorithm>
 #include "Bloom.h"
 using namespace std;
 

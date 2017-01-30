@@ -30,6 +30,7 @@
 
 
 #include "timer.h"
+#include <algorithm>
 using namespace std;
 
 
@@ -71,7 +72,7 @@ Timer::Timer(IDirect3DDevice9 *device) : enabled(true), flushEnabled(true), wind
     start();
 }
 #else
-Timer::Timer(ID3D10Device *device) : enabled(true), flushEnabled(true), windowSize(10), repetitionCount(1) {
+Timer::Timer(ID3D10Device *device) : amEnabled(true), flushEnabled(true), windowSize(10), repetitionCount(1) {
     HRESULT hr;
 
     D3D10_QUERY_DESC desc;
@@ -90,7 +91,7 @@ Timer::~Timer() {
 
 
 void Timer::start() {
-    if (enabled) {
+    if (amEnabled) {
         if (flushEnabled)
             flush();
 
@@ -101,7 +102,7 @@ void Timer::start() {
 
 
 float Timer::clock(const wstring &msg) {
-    if (enabled) {
+    if (amEnabled) {
         if (flushEnabled)
             flush();
 

@@ -6,8 +6,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 //--------------------------------------------------------------------------------------
 #include "DXUT.h"
-#undef min // use __min instead
-#undef max // use __max instead
+#include <cmath>
 
 //--------------------------------------------------------------------------------------
 // Forward declarations

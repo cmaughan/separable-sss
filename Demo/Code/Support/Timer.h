@@ -62,8 +62,8 @@ class Timer {
 
         void sleep(float ms);
 
-        void setEnabled(bool enabled) { this->enabled = enabled; }
-        bool isEnabled() const { return enabled; }
+        void setEnabled(bool enabled) { this->amEnabled = enabled; }
+        bool isEnabled() const { return amEnabled; }
 
         void setFlushEnabled(bool flushEnabled) { this->flushEnabled = flushEnabled; }
         bool isFlushEnabled() const { return flushEnabled; }
@@ -91,7 +91,7 @@ class Timer {
         __int64 t0;
         float accum;
 
-        bool enabled;
+        bool amEnabled;
         bool flushEnabled;
         int windowSize;
         int repetitionCount;

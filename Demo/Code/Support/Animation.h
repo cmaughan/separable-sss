@@ -28,6 +28,7 @@
  * policies, either expressed or implied, of the copyright holders.
  */
 
+#include <algorithm>
 
 #ifndef ANIMATION_H
 #define ANIMATION_H
